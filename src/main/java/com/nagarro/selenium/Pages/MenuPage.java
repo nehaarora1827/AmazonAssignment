@@ -16,7 +16,7 @@ public class MenuPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public static Logger log = Logger.getLogger(MenuPage.class.getName());
+	public Logger log = Logger.getLogger(MenuPage.class.getName());
 
 	// Defining menu page locators
 	@FindBy(xpath = "//*[@id='nav-search']/form/div[1]/div/div")
@@ -31,7 +31,7 @@ public class MenuPage extends BaseClass {
 	@FindBy(xpath = "//*[@type='submit']")
 	public WebElement icon;
 	
-	@FindBy(xpath="//div[@id='nav-xshop']/a[1]")
+	@FindBy(xpath="//*[@id='nav-xshop']/a[1]")
 	public WebElement Mobiles;
 
 	// Clicking on All dropdown
@@ -66,6 +66,7 @@ public class MenuPage extends BaseClass {
 	//Clicking on amzon navigation bar
 	public void clickingOnMobilesLink()
 	{
+		waitForElement(Mobiles);
 		Mobiles.click();
 		test.log(Status.INFO, "Clicked on Mobiles link");
 		log.info(" ***Clicked on Mobiles link*** ");

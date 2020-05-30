@@ -19,7 +19,7 @@ public class CartPage extends BaseClass {
 		
 	}
 
-	public static Logger log = Logger.getLogger(CartPage.class.getName());
+	public Logger log = Logger.getLogger(CartPage.class.getName());
 
 	// Defining Cart page locators
 	@FindBy(xpath = "//*[@id='nav-tools']/a[1]/following-sibling::a[4]")

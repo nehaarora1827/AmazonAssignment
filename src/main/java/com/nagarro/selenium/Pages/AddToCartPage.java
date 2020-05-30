@@ -15,7 +15,7 @@ public class AddToCartPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public static Logger log = Logger.getLogger(AddToCartPage.class.getName());
+	public Logger log = Logger.getLogger(AddToCartPage.class.getName());
 
 	// Defining Add to Cart locators
 	@FindBy(xpath = "//input[@id='add-to-cart-button']")

@@ -18,7 +18,7 @@ public class ProductPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public static Logger log = Logger.getLogger(ProductPage.class.getName());
+	public Logger log = Logger.getLogger(ProductPage.class.getName());
 
 	public static String selectedProductTitle;
 

@@ -25,7 +25,7 @@ public class BaseClass {
 	public static ExcelReader exl = new ExcelReader(
 			System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\TestData.xlsx");
 	public static ExtentTest test;
-	public static Logger log = Logger.getLogger(BaseClass.class.getName());
+	public Logger log = Logger.getLogger(BaseClass.class.getName());
 
 
 	// Initializing the browser
@@ -61,7 +61,7 @@ public class BaseClass {
 	}
 
 	// Calling initialize browser method and navigate to amazon site
-	@BeforeTest(groups = { "Regression", "Sanity" })
+	@BeforeClass(groups = { "Regression", "Sanity" })
 	public void initialize() {
 		initializeBrowser();
 		driver.get(readingPropertiesFile.getProperty("testsiteurl"));
@@ -69,7 +69,7 @@ public class BaseClass {
 	}
 
 	// Closing the browser
-	@AfterTest(groups = { "Regression", "Sanity" })
+	@AfterClass(groups = { "Regression", "Sanity" })
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
