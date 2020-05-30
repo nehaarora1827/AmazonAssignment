@@ -46,7 +46,7 @@ public class AddToCartPage extends BaseClass {
 			addToCartButtonSecond.click();
 		} else {
 
-			log.info(" ***Button is not displayed*** ");
+			log.info(" ***Add to Cart button is not displayed*** ");
 		}
 		test.log(Status.INFO, "Clicked on Add to Cart button");
 		log.info(" ***Clicked on Add to Cart button*** ");

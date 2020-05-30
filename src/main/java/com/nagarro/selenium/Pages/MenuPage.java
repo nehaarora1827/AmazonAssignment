@@ -30,6 +30,9 @@ public class MenuPage extends BaseClass {
 
 	@FindBy(xpath = "//*[@type='submit']")
 	public WebElement icon;
+	
+	@FindBy(xpath="//div[@id='nav-xshop']/a[1]")
+	public WebElement Mobiles;
 
 	// Clicking on All dropdown
 	public void clickingOnAllDropdown() {
@@ -58,5 +61,13 @@ public class MenuPage extends BaseClass {
 		icon.click();
 		test.log(Status.INFO, "Clicked on Search icon");
 		log.info(" ***Clicked on Search icon*** ");
+	}
+	
+	//Clicking on amzon navigation bar
+	public void clickingOnMobilesLink()
+	{
+		Mobiles.click();
+		test.log(Status.INFO, "Clicked on Mobiles link");
+		log.info(" ***Clicked on Mobiles link*** ");
 	}
 }
