@@ -25,7 +25,7 @@ public class CartPage extends BaseClass {
 	@FindBy(xpath = "//*[@id='nav-tools']/a[1]/following-sibling::a[4]")
 	public WebElement cart;
 
-	@FindBy(xpath = "//*[@class='a-size-medium sc-product-title']")
+	@FindBy(xpath = "//span[@class ='a-size-medium sc-product-title a-text-bold']")
 	public List<WebElement> CartProductName;
 
 	// Clicking on Cart button from menu
