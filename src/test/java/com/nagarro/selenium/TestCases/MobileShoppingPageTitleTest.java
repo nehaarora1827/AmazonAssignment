@@ -16,7 +16,7 @@ public class MobileShoppingPageTitleTest extends BaseClass {
 		menu.clickingOnMobilesLink();
 		
 		//Failing this test case
-		Assert.assertTrue(driver.getTitle().contains("Android"));
+		Assert.assertTrue(driver.getTitle().contains("Mobile"));
 	}
 
 }
