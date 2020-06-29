@@ -2,6 +2,7 @@ package com.nagarro.selenium.Pages;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -33,6 +34,12 @@ public class MenuPage extends BaseClass {
 	
 	@FindBy(xpath="//*[@id='nav-xshop']/a[1]")
 	public WebElement Mobiles;
+	
+	@FindBy(xpath="//a[@id='nav-link-accountList']")
+	public WebElement AccountAndLists;
+	
+	@FindBy(xpath="//a[@href='/gp/css/homepage.html?ref_=nav_AccountFlyout_ya']")
+	public WebElement YourAccount;
 
 	// Clicking on All dropdown
 	public void clickingOnAllDropdown() {
@@ -63,7 +70,7 @@ public class MenuPage extends BaseClass {
 		log.info(" ***Clicked on Search icon*** ");
 	}
 	
-	//Clicking on amzon navigation bar
+	//Clicking on amazon navigation bar
 	public void clickingOnMobilesLink()
 	{
 		waitForElement(Mobiles);
@@ -71,4 +78,17 @@ public class MenuPage extends BaseClass {
 		test.log(Status.INFO, "Clicked on Mobiles link");
 		log.info(" ***Clicked on Mobiles link*** ");
 	}
+	
+	// method to navigate to "Your Account" option from header
+    public void goToYourAccount() {
+
+ 
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(AccountAndLists).perform();
+        waitForElement(YourAccount);
+        YourAccount.click();
+        test.log(Status.INFO, " Clicked on Your Account link ");
+        log.info(" *** Clicked on Your Account link *** ");
+    }
 }

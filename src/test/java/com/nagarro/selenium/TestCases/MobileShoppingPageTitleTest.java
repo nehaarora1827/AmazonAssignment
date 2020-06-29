@@ -10,13 +10,14 @@ public class MobileShoppingPageTitleTest extends BaseClass {
 	MenuPage menu;
 	
 	@Test(groups = { "Regression", "Sanity" })
-	public void verifyMobileShoppingPageTitle()
+	public void verifyMobileShoppingPageTitle() throws InterruptedException
 	{
 		menu=new MenuPage();
 		menu.clickingOnMobilesLink();
+		Thread.sleep(10000);
 		
 		//Failing this test case
-		Assert.assertTrue(driver.getTitle().contains("Mobile"));
+		Assert.assertTrue(driver.getTitle().contains("Mobiles"));
 	}
 
 }
