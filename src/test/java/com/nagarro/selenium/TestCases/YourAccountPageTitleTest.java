@@ -13,6 +13,7 @@ public class YourAccountPageTitleTest extends BaseClass {
 		try{
 		MenuPage header = new MenuPage();
 		header.goToYourAccount();
+		Thread.sleep(10000);
 		String PageTitle = driver.getTitle();
 		//Applying assertion to fail this test case
 		Assert.assertTrue(
